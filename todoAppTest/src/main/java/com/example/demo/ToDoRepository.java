@@ -1,0 +1,9 @@
+package com.example.demo;
+
+import java.util.List;
+import org.springframework.data.repository.CrudRepository;	
+
+	public interface ToDoRepository extends CrudRepository<ToDo, Long> {
+		List<ToDo> findByTodoLike(String tod);
+		List<ToDo> findByDone(Boolean bool);
+	}
